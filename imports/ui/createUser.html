@@ -1,0 +1,22 @@
+<template name="createUser">
+    <div>
+        <form class="new-user">
+            First name: <br>
+            <input type="text" id="firstName" placeholder="first name" /> <br>
+            Last name: <br>
+            <input type="text" id="lastName" placeholder="last name" /> <br>
+            Role: <br>
+            <select class="userRole">
+                {{#each getRoles}}
+                    <option id="{{this._id}}" value="{{this.role}}">{{this.role}}</option>
+                {{/each}}
+            </select> <br>
+            Gender: <br>
+            <input type="radio" name="gender" value="male"> Male <br>
+            <input type="radio" name="gender" value="female"> Female <br>
+            <input type="radio" name="gender" value="other"> Other <br>
+            <br><br>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</template>

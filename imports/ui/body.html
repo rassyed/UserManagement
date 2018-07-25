@@ -1,0 +1,16 @@
+<body>
+    <div class="container">
+        <header>
+            {{> loginButtons}}
+        </header>
+        {{#if currentUser}}
+            <div class="actionContainer">
+                <button id="createUser" class="create">Create User</button>
+                <button id="createRole" class="create">Create Role</button>
+                <button id="createGroup" class="create">Create Group</button>
+                <button id="groups" class="details">Groups</button>
+            </div>
+            <div class="templateHolder"></div>
+        {{/if}}
+    </div>
+</body>

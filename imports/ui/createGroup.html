@@ -1,0 +1,14 @@
+<template name="createGroup">
+    <div>
+        <form class="new-group">
+            Group name: <br>
+            <input type="text" id="groupName" placeholder="Group name" /> <br>
+            Users: <br>
+            {{#each getUsers}}
+                <input type="checkbox" value="{{this._id}}" class="groupMembers"> {{this.firstName}} {{this.lastName}} <br>
+            {{/each}}
+            <br><br>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</template>

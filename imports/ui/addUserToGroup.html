@@ -1,0 +1,14 @@
+<template name="addUserToGroup">
+    {{#if newUsersExists this.groupId}}
+        <form id="{{this.groupId}}" class="add-new-user">
+            Users: <br>
+            {{#each getNewUsers this.groupId}}
+                <input type="checkbox" value="{{this._id}}" class="groupNewMembers"> {{this.firstName}} {{this.lastName}} <br>
+            {{/each}}
+            <br>
+            <input id={{this.groupId}} type="submit" value="Submit" />
+        </form>
+    {{else}}
+        No new users exists
+    {{/if}}
+</template>
